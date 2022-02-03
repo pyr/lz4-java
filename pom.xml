@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.exoscale</groupId>
+  <artifactId>lz4-java</artifactId>
+  <packaging>jar</packaging>
+  <version>1.8.0-exoscale4</version>
+  <name>lz4-java</name>
+  <description/>
+  <build>
+    <extensions>
+      <extension>
+        <groupId>exoscale</groupId>
+        <artifactId>sos-wagon-private</artifactId>
+        <version>1.3.2-exoscale11</version>
+      </extension>
+    </extensions>
+  </build>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>https://repo1.maven.org/maven2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+  </repositories>
+
+  <!-- to publish to a private bucket -->
+
+  <distributionManagement>
+    <repository>
+      <id>artifacts</id>
+      <name>Artifacts</name>
+      <url>s3p://exo-artifacts/releases</url>
+    </repository>
+  </distributionManagement>
+
+
+     <pluginRepositories>
+       <pluginRepository>
+         <id>clojars.org</id>
+         <name>Clojars Repository</name>
+         <url>http://clojars.org/repo</url>
+       </pluginRepository>
+     </pluginRepositories>
+</project>

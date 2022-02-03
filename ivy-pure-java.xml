@@ -15,7 +15,7 @@
 -->
 
 <ivy-module version="2.0">
-  <info organisation="org.lz4" module="lz4-pure-java" revision="1.9-SNAPSHOT" />
+  <info organisation="com.exoscale" module="lz4-pure-java" revision="1.8.0-exoscale4" />
 
   <configurations defaultconfmapping="default->default">
     <conf name="default" />
